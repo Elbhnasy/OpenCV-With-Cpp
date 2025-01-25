@@ -20,6 +20,16 @@ int main()
     */
     cv :: Mat kernel = cv :: getStructuringElement(cv :: MORPH_RECT, cv :: Size(5, 5), cv :: Point(-1, -1));
     cv :: erode(img, erodeImg, kernel, cv :: Point(-1, -1), 1, cv :: BORDER_CONSTANT, cv :: morphologyDefaultBorderValue());
+    /*
+    dilate	(	InputArray 	src,
+    OutputArray 	dst,
+    InputArray 	kernel,
+    Point 	anchor = Point(-1,-1),
+    int 	iterations = 1,
+    int 	borderType = BORDER_CONSTANT,
+    const Scalar & 	borderValue = morphologyDefaultBorderValue() 
+    )	
+*/
     cv :: dilate(img, dilateImg, kernel, cv :: Point(-1, -1), 1, cv :: BORDER_CONSTANT, cv :: morphologyDefaultBorderValue());
     cv :: imshow("Original Image", img);
     cv :: imshow("Erode Image", erodeImg);
