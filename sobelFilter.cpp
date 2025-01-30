@@ -86,9 +86,5 @@ int main()
         cv :: imshow("Original Image", img);
         cv :: imshow("Sobel Image", sobelImg);
     }
-    
-    
-    
-    cv :: waitKey(0);
     return 0;
 }
